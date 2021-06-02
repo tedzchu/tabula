@@ -1,6 +1,12 @@
 import EditablePage from "@/components/editablePage/editablePage";
+import { Block } from "@/components/editablePage/editablePage.type";
 import { GetServerSideProps } from "next";
-import { PageProps } from "../types/index.type";
+
+type PageProps = {
+  pid: string
+  blocks: Block[]
+  err: boolean
+}
 
 const Page = ({ pid, blocks, err }: PageProps) => {
   return <EditablePage id={pid} fetchedBlocks={blocks} err={err} />;

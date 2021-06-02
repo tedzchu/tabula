@@ -1,7 +1,13 @@
 import React from "react";
 import EditablePage from "@/components/editablePage/editablePage";
 import { GetServerSideProps } from "next";
-import { PageProps } from "./types/index.type";
+import { Block } from "@/components/editablePage/editablePage.type";
+
+type PageProps = {
+  pid: string
+  blocks: Block[]
+  err: boolean
+}
 
 export default function IndexPage ({ pid, blocks, err }: PageProps) {
   return <EditablePage id={pid} fetchedBlocks={blocks} err={err}/>
