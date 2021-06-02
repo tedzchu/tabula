@@ -6,10 +6,10 @@ const deletePublicPages = require('./deletePublicPages');
 const executeJobs = async () => {
   console.log('Task runner setup database connection');
   mongoose
-    .connect(
-      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@notion-clone-0.gqqwp.gcp.mongodb.net/notion?retryWrites=true&w=majority`,
-      { useNewUrlParser: true, useUnifiedTopology: true }
-    )
+    .connect(`${process.env.MONGO_URI}`, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
     .then(async () => {
       console.log('SUCCESS - Database connected to task runner.');
 
