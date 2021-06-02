@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+.block {
+  padding: 0.25rem;
+  // Better support for safari
+  -webkit-user-select: text;
+  user-select: text;
+  white-space: pre-wrap;
+}
+
+.block:focus {
+  background: $tertiary;
+  outline-color: $secondary;
+}
+
+.block:hover {
+  background: $tertiary;
+}
