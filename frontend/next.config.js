@@ -7,5 +7,4 @@ module.exports = withImages({
   future: {
     webpack5: true,
   },
-  target: serverless,
 });
